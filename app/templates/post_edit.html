@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit Post</h1>
+<form action="/posts/{{ post.id }}/edit/" method="post">
+    <input type="text" name="title" value="{{ post.title }}" required>
+    <textarea name="content" required>{{ post.content }}</textarea>
+    <button type="submit">Update Post</button>
+</form>
+<a href="/posts/">Back to Posts</a>
+{% endblock %}
